@@ -1,3 +1,4 @@
+import React from "react"
 import { Users, Award, BookOpen, Clock, MapPin, Phone, Mail } from "lucide-react"
 
 const AboutPage = () => {
