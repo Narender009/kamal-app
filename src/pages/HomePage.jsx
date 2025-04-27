@@ -1,18 +1,18 @@
 import React from "react"
 import HeroSection from "../components/Home/herosection";
-import CoursesList from "../components/home/courseslist";
-import FeaturesSection from "../components/Home/featuressection";
-import TestimonialsSection from "../components/home/testimonialssection";
-import CtaSection from "../components/home/ctasection"
+// import CoursesList from "../components/home/CoursesList";
+// import FeaturesSection from "../components/Home/FeaturesSection";
+// import TestimonialsSection from "../components/home/TestimonialsSection";
+// import CtaSection from "../components/home/CtaSection"
 
 const HomePage = () => {
   return (
     <div>
       <HeroSection />
-      <FeaturesSection />
+      {/* <FeaturesSection />
       <CoursesList />
       <TestimonialsSection />
-      <CtaSection />
+      <CtaSection /> */}
     </div>
   )
 }
