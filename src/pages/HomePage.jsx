@@ -1,9 +1,9 @@
 import React from "react"
 import HeroSection from "../components/Home/herosection";
 import FeaturesSection from "../components/Home/FeaturesSection";
-import CoursesList from "../components/home/CoursesList";
-// import TestimonialsSection from "../components/home/TestimonialsSection";
-// import CtaSection from "../components/home/CtaSection"
+import CoursesList from "../components/Home/CoursesList";
+import TestimonialsSection from "../components/Home/TestimonialsSection";
+import CtaSection from "../components/Home/CtaSection"
 
 const HomePage = () => {
   return (
@@ -11,8 +11,8 @@ const HomePage = () => {
       <HeroSection />
       <FeaturesSection />
       <CoursesList />
-      {/* <TestimonialsSection />
-      <CtaSection /> */}
+      <TestimonialsSection />
+      <CtaSection />
     </div>
   )
 }
