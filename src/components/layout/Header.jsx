@@ -14,7 +14,7 @@ const Header = () => {
     <header className="bg-white py-4 px-6 shadow-sm">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/images/logo.jpeg" alt="FinTaxPro Logo" className="h-12" />
+          <img src="/images/logo.png" alt="FinTaxPro Logo" className="h-20" />
           <div>
             <h1 className="text-2xl font-bold text-gray-800">KamalTaxPro</h1>
             <p className="text-sm text-gray-600">Finance | Taxation | Accounts</p>

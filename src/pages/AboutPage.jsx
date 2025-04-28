@@ -164,7 +164,7 @@ const AboutPage = () => {
             <div className="flex flex-col items-center text-center">
               <Mail className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Email</h3>
-              <p className="text-gray-600">info@fintaxpro.in</p>
+              <p className="text-gray-600">info@Kamaltaxpro.in</p>
             </div>
           </div>
         </div>

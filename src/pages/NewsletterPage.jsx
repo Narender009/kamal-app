@@ -61,7 +61,7 @@ const NewsletterPage = () => {
     <div className="container mx-auto px-6 py-12">
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          FinTaxPro Newsletter
+        KamalTaxPro Newsletter
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Stay updated with the latest news, updates, and insights in finance,

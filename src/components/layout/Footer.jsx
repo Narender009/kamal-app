@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">About FinTaxPro</h3>
+            <h3 className="text-lg font-semibold mb-4">About KamalTaxPro</h3>
             <p className="text-gray-600">
-              FinTaxPro provides practical learning in finance, taxation, and accounting with hands-on courses designed
+            KamalTaxPro provides practical learning in finance, taxation, and accounting with hands-on courses designed
               for real-world applications.
             </p>
           </div>
@@ -43,13 +43,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <p className="text-gray-600 mb-2">Phone: +91 7827521794</p>
-            <p className="text-gray-600 mb-2">Email: info@fintaxpro.in</p>
-            <p className="text-gray-600">Website: fintaxpro.in</p>
+            <p className="text-gray-600 mb-2">Email: info@Kamaltaxpro.in</p>
+            <p className="text-gray-600">Website: Kamaltaxpro.in</p>
           </div>
         </div>
 
         <div className="border-t border-gray-200 mt-8 pt-6 text-center">
-          <p className="text-gray-600">© {new Date().getFullYear()} FinTaxPro. All rights reserved.</p>
+          <p className="text-gray-600">© {new Date().getFullYear()} KamalTaxPro. All rights reserved.</p>
         </div>
       </div>
     </footer>

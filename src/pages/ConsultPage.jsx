@@ -72,7 +72,7 @@ const ConsultPage = () => {
                 <Mail className="w-6 h-6 mr-4 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p>info@fintaxpro.in</p>
+                  <p>info@Kamaltaxpro.in</p>
                 </div>
               </div>
 
