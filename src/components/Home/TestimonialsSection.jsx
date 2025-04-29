@@ -33,25 +33,30 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-indigo-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800">What Our Students Say</h2>
-          <p className="text-gray-600 mt-2">Hear from our satisfied learners about their experience</p>
+          <h2 className="text-3xl font-bold text-indigo-800">What Our Students Say</h2>
+          <p className="text-indigo-600 mt-2">Hear from our satisfied learners about their experience</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-md">
+            <div 
+              key={testimonial.id} 
+              className="bg-white p-6 rounded-lg shadow-md border-l-4 border-indigo-500 hover:shadow-lg transition-shadow duration-300"
+            >
               <div className="flex items-center mb-4">
-                <img
-                  src={testimonial.image || "/placeholder.svg"}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center overflow-hidden mr-4">
+                  <img
+                    src={testimonial.image || "/placeholder.svg"}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
-                  <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                  <h4 className="font-semibold text-indigo-900">{testimonial.name}</h4>
+                  <p className="text-indigo-700 text-sm">{testimonial.role}</p>
                 </div>
               </div>
 
@@ -60,13 +65,13 @@ const TestimonialsSection = () => {
                   <Star
                     key={i}
                     className={`w-4 h-4 ${
-                      i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
+                      i < testimonial.rating ? "text-purple-500 fill-purple-500" : "text-gray-300"
                     }`}
                   />
                 ))}
               </div>
 
-              <p className="text-gray-700 italic">"{testimonial.content}"</p>
+              <p className="text-gray-700 italic bg-indigo-50 p-3 rounded-md">&ldquo;{testimonial.content}&rdquo;</p>
             </div>
           ))}
         </div>

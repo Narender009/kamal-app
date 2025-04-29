@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -11,29 +10,29 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white py-4 px-6 shadow-sm">
+    <header className="bg-gradient-to-r from-indigo-900 to-purple-800 py-4 px-6 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2">
-          <img src="/images/logo.png" alt="FinTaxPro Logo" className="h-20" />
+        <a href="/" className="flex items-center gap-2">
+          <img src="images/logo.png" alt="KamalTaxPro Logo" className="h-20" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-800">KamalTaxPro</h1>
-            <p className="text-sm text-gray-600">Finance | Taxation | Accounts</p>
+            <h1 className="text-2xl font-bold text-amber-400">KamalTaxPro</h1>
+            <p className="text-sm text-amber-100">Finance | Taxation | Accounts</p>
           </div>
-        </Link>
+        </a>
 
         <nav className="hidden md:flex items-center space-x-6">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/courses">Courses</NavLink>
-          <NavLink to="/services">Services</NavLink>
-          <NavLink to="/consult-us">Consult Us</NavLink>
-          <NavLink to="/buy-dsc">Buy DSC</NavLink>
-          <NavLink to="/newsletter">Newsletter</NavLink>
-          <NavLink to="/about-us">About us</NavLink>
-          <NavLink to="/faq">FAQ</NavLink>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/courses">Courses</NavLink>
+          <NavLink href="/services">Services</NavLink>
+          <NavLink href="/consult-us">Consult Us</NavLink>
+          <NavLink href="/buy-dsc">Buy DSC</NavLink>
+          <NavLink href="/newsletter">Newsletter</NavLink>
+          <NavLink href="/about-us">About us</NavLink>
+          <NavLink href="/faq">FAQ</NavLink>
+          <NavLink href="/login" className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md transition-colors">Login</NavLink>
         </nav>
 
-        <button className="md:hidden text-gray-700" onClick={toggleMobileMenu}>
+        <button className="md:hidden text-amber-100" onClick={toggleMobileMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -47,17 +46,17 @@ const Header = () => {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden mt-4 bg-white border-t">
+        <div className="md:hidden mt-4 bg-indigo-900 border-t border-indigo-700">
           <div className="flex flex-col space-y-3 py-4 px-6">
-            <MobileNavLink to="/" onClick={toggleMobileMenu}>Home</MobileNavLink>
-            <MobileNavLink to="/courses" onClick={toggleMobileMenu}>Courses</MobileNavLink>
-            <MobileNavLink to="/services" onClick={toggleMobileMenu}>Services</MobileNavLink>
-            <MobileNavLink to="/consult-us" onClick={toggleMobileMenu}>Consult Us</MobileNavLink>
-            <MobileNavLink to="/buy-dsc" onClick={toggleMobileMenu}>Buy DSC</MobileNavLink>
-            <MobileNavLink to="/newsletter" onClick={toggleMobileMenu}>Newsletter</MobileNavLink>
-            <MobileNavLink to="/about-us" onClick={toggleMobileMenu}>About us</MobileNavLink>
-            <MobileNavLink to="/faq" onClick={toggleMobileMenu}>FAQ</MobileNavLink>
-            <MobileNavLink to="/login" onClick={toggleMobileMenu}>Login</MobileNavLink>
+            <MobileNavLink href="/" onClick={toggleMobileMenu}>Home</MobileNavLink>
+            <MobileNavLink href="/courses" onClick={toggleMobileMenu}>Courses</MobileNavLink>
+            <MobileNavLink href="/services" onClick={toggleMobileMenu}>Services</MobileNavLink>
+            <MobileNavLink href="/consult-us" onClick={toggleMobileMenu}>Consult Us</MobileNavLink>
+            <MobileNavLink href="/buy-dsc" onClick={toggleMobileMenu}>Buy DSC</MobileNavLink>
+            <MobileNavLink href="/newsletter" onClick={toggleMobileMenu}>Newsletter</MobileNavLink>
+            <MobileNavLink href="/about-us" onClick={toggleMobileMenu}>About us</MobileNavLink>
+            <MobileNavLink href="/faq" onClick={toggleMobileMenu}>FAQ</MobileNavLink>
+            <MobileNavLink href="/login" onClick={toggleMobileMenu} className="bg-amber-500 text-white px-4 py-2 rounded-md inline-block mt-2">Login</MobileNavLink>
           </div>
         </div>
       )}
@@ -65,23 +64,23 @@ const Header = () => {
   )
 }
 
-const NavLink = ({ to, children }) => {
+const NavLink = ({ href, children, className = "" }) => {
   return (
-    <Link to={to} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+    <a href={href} className={`text-amber-100 hover:text-amber-400 font-medium transition-colors ${className}`}>
       {children}
-    </Link>
+    </a>
   )
 }
 
-const MobileNavLink = ({ to, children, onClick }) => {
+const MobileNavLink = ({ href, children, onClick, className = "" }) => {
   return (
-    <Link
-      to={to}
-      className="text-gray-700 hover:text-blue-600 font-medium transition-colors block py-2"
+    <a
+      href={href}
+      className={`text-amber-100 hover:text-amber-400 font-medium transition-colors block py-2 ${className}`}
       onClick={onClick}
     >
       {children}
-    </Link>
+    </a>
   )
 }
 
