@@ -47,7 +47,7 @@ const FeaturesSection = () => {
     <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-purple-50 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-indigo-900">Why Choose KamalTaxPro?</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-indigo-900">Why Choose Kamal Legal finTax Pro Solution?</h2>
           <p className="text-indigo-600 mt-2 md:text-lg">
             Expert legal, tax, and compliance services tailored to support your business growth with confidence.
           </p>
