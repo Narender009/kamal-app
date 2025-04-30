@@ -18,7 +18,7 @@ const Footer = () => {
         {/* Logo and company info */}
         <div className="flex flex-col md:flex-row justify-between mb-8">
           <div className="mb-8 md:mb-0">
-            <h2 className="text-2xl font-bold text-white mb-2">Kamal Legal finTax Pro Solution</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Kamal Legal FinTax Pro Solution</h2>
             <div className="h-1 w-full bg-purple-400 rounded mb-4"></div>
           </div>
           
@@ -125,7 +125,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="text-purple-400 mr-3" />
-                <CustomLink href="mailto:info@Kamaltaxpro.in">Kamalray.1992@gmail.com</CustomLink>
+                <CustomLink href="mailto:info@Kamaltaxpro.in">kamalray.1992@gmail.com</CustomLink>
               </li>
               <li className="flex items-center">
                 <Globe size={16} className="text-purple-400 mr-3" />

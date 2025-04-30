@@ -25,7 +25,7 @@ const HeroSection = () => {
 
             <div className="text-sm md:text-base text-purple-100">
               <p>
-              Company Registration | Accounting | GST Filing | Income Tax | TDS | PF&ESIC | Import&Export Certificate | Trademark | MSME Certificate | Aadhar udham Registration | Tax Audit & Planing | ROC Filing
+              Company Registration | Accounting | GST Filing | Income Tax | TDS | PF&ESIC | Import&Export Certificate | Trademark | MSME Certificate | Aadhar Udham Registration | Tax Audit & Planning | ROC Filing | Part time & Freelance Accountant Available
               </p>
             </div>
 
