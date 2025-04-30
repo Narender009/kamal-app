@@ -141,7 +141,7 @@ const Footer = () => {
 
         <div className="mt-6 text-center">
           <p className="text-indigo-200">
-            © {new Date().getFullYear()} KamalTaxPro. All rights reserved.
+            © {new Date().getFullYear()} Kamal Legal FinTax Pro Solution. All rights reserved.
           </p>
           <div className="mt-3 flex justify-center space-x-4 text-sm">
             <CustomLink href="/privacy-policy">Privacy Policy</CustomLink>
