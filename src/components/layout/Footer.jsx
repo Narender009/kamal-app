@@ -18,7 +18,7 @@ const Footer = () => {
         {/* Logo and company info */}
         <div className="flex flex-col md:flex-row justify-between mb-8">
           <div className="mb-8 md:mb-0">
-            <h2 className="text-2xl font-bold text-white mb-2">KamalFinTax</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Kamal Legal finTax Pro Solution</h2>
             <div className="h-1 w-full bg-purple-400 rounded mb-4"></div>
           </div>
           
