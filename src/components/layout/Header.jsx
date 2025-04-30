@@ -15,8 +15,8 @@ const Header = () => {
         <a href="/" className="flex items-center gap-2">
           <img src="images/logo.png" alt="KamalTaxPro Logo" className="h-20" />
           <div>
-            <h1 className="text-2xl font-bold text-amber-400">KamalTaxPro</h1>
-            <p className="text-sm text-amber-100">Finance | Taxation | Accounts</p>
+            <h1 className="text-2xl font-bold text-amber-400">KamalLegalfintaxprosolution </h1>
+            <p className="text-sm text-amber-100">Legal | Finance | Taxation | Accounts</p>
           </div>
         </a>
 

@@ -18,8 +18,8 @@ const Footer = () => {
         {/* Logo and company info */}
         <div className="flex flex-col md:flex-row justify-between mb-8">
           <div className="mb-8 md:mb-0">
-            <h2 className="text-2xl font-bold text-white mb-2">KamalTaxPro</h2>
-            <div className="h-1 w-20 bg-purple-400 rounded mb-4"></div>
+            <h2 className="text-2xl font-bold text-white mb-2">KamalFinTax</h2>
+            <div className="h-1 w-full bg-purple-400 rounded mb-4"></div>
           </div>
           
           <div className="flex space-x-4">
@@ -40,17 +40,42 @@ const Footer = () => {
         
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-indigo-700 pb-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-300">About KamalTaxPro</h3>
-            <p className="text-indigo-100 leading-relaxed">
-              KamalTaxPro provides practical learning in finance, taxation, and accounting with hands-on courses designed
-              for real-world applications.
-            </p>
-            <div className="mt-6 bg-indigo-800 p-4 rounded-lg">
-              <p className="text-sm text-indigo-200 italic">
-                "Empowering financial professionals with practical skills and expert knowledge since 2015"
-              </p>
-            </div>
+        <div>
+            <h3 className="text-lg font-semibold mb-4 text-purple-300">Company</h3>
+            <ul className="space-y-3">
+              <li className="transition-transform duration-300 hover:translate-x-2">
+                <CustomLink href="/courses">
+                  <span className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                    About us
+                  </span>
+                </CustomLink>
+              </li>
+              <li className="transition-transform duration-300 hover:translate-x-2">
+                <CustomLink href="/services">
+                  <span className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                    Privacy Policy
+                  </span>
+                </CustomLink>
+              </li>
+              <li className="transition-transform duration-300 hover:translate-x-2">
+                <CustomLink href="/consult-us">
+                  <span className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                    Terms & Conditions
+                  </span>
+                </CustomLink>
+              </li>
+              <li className="transition-transform duration-300 hover:translate-x-2">
+                <CustomLink href="/about-us">
+                  <span className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                    Refund Policy
+                  </span>
+                </CustomLink>
+              </li>
+            </ul>
           </div>
 
           <div>
@@ -96,15 +121,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Phone size={16} className="text-purple-400 mr-3" />
-                <span className="text-indigo-100">+91 7827521794</span>
+                <span className="text-indigo-100">+91 9990778501</span>
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="text-purple-400 mr-3" />
-                <CustomLink href="mailto:info@Kamaltaxpro.in">info@Kamaltaxpro.in</CustomLink>
+                <CustomLink href="mailto:info@Kamaltaxpro.in">Kamalray.1992@gmail.com</CustomLink>
               </li>
               <li className="flex items-center">
                 <Globe size={16} className="text-purple-400 mr-3" />
-                <CustomLink href="https://Kamaltaxpro.in">Kamaltaxpro.in</CustomLink>
+                <CustomLink href="https://Kamaltaxpro.in">KamalLegalFinTax.in</CustomLink>
               </li>
               <li className="flex items-start mt-4">
                 <MapPin size={16} className="text-purple-400 mr-3 mt-1 flex-shrink-0" />

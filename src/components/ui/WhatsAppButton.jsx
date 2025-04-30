@@ -3,7 +3,7 @@ import React from "react"
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    window.open("", "_blank")
+    window.open("https://wa.me/919990778501", "_blank")
   }
 
   return (

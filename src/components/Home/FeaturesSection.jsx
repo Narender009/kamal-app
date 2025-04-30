@@ -2,43 +2,45 @@ import React from "react"
 import { CheckCircle } from "lucide-react"
 
 const features = [
-  {
-    id: 1,
-    title: "Practical Learning",
-    description: "Our courses focus on real-world applications with practical examples and case studies.",
-    icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
-  },
-  {
-    id: 2,
-    title: "Expert Instructors",
-    description: "Learn from industry professionals with years of experience in finance and taxation.",
-    icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
-  },
-  {
-    id: 3,
-    title: "Lifetime Access",
-    description: "Get lifetime access to course materials and updates with a one-time payment.",
-    icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
-  },
-  {
-    id: 4,
-    title: "Certificate of Completion",
-    description: "Receive a certificate upon course completion to enhance your professional profile.",
-    icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
-  },
-  {
-    id: 5,
-    title: "Dedicated Support",
-    description: "Get your queries resolved with our dedicated support team and instructor assistance.",
-    icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
-  },
-  {
-    id: 6,
-    title: "Updated Content",
-    description: "Course content is regularly updated to reflect the latest regulations and practices.",
-    icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
-  },
-]
+  
+    {
+      id: 1,
+      title: "Comprehensive Services",
+      description: "From GST and income tax to business registration and legal compliance — we cover it all under one roof.",
+      icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
+    },
+    {
+      id: 2,
+      title: "Experienced Professionals",
+      description: "Work with seasoned experts in legal, taxation, and corporate compliance for accurate and effective solutions.",
+      icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
+    },
+    {
+      id: 3,
+      title: "Tailored Solutions",
+      description: "Get business-specific strategies designed to meet your unique financial and compliance requirements.",
+      icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
+    },
+    {
+      id: 4,
+      title: "End-to-End Support",
+      description: "From consultation to execution, we assist you through every step of your business journey.",
+      icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
+    },
+    {
+      id: 5,
+      title: "Transparent & Hassle-Free Process",
+      description: "Our streamlined process ensures you stay informed and in control without any hidden hurdles.",
+      icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
+    },
+    {
+      id: 6,
+      title: "Trusted by Businesses",
+      description: "A preferred partner for startups, MSMEs, and enterprises across India for legal and financial services.",
+      icon: <CheckCircle className="h-8 w-8 text-amber-500" />,
+    },
+  ]
+  
 
 const FeaturesSection = () => {
   return (
@@ -46,7 +48,10 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-indigo-900">Why Choose KamalTaxPro?</h2>
-          <p className="text-indigo-600 mt-2 md:text-lg">We offer the best practical learning experience in finance and taxation</p>
+          <p className="text-indigo-600 mt-2 md:text-lg">
+            Expert legal, tax, and compliance services tailored to support your business growth with confidence.
+          </p>
+
         </div>
         
         {/* Improved grid layout with better responsive breakpoints */}

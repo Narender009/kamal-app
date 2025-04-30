@@ -16,11 +16,12 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-6">
-            <p className="text-lg md:text-xl text-amber-300 font-medium">"Practical Learning Means KamalTaxPro"</p>
+            <p className="text-lg md:text-xl text-amber-300 font-medium">Welcome to Kamal Legal FinTax  Pro Solution</p>
 
             <h2 className="text-3xl md:text-5xl font-bold leading-tight text-white">
-              Learn Practical Working Skills With Our Courses
+              Simplifying Legal, Tax & Business Compliance For Your Growth
             </h2>
+
 
             <div className="text-sm md:text-base text-purple-100">
               <p>
@@ -32,7 +33,7 @@ const HeroSection = () => {
             <div>
               <a href="/courses">
                 <Button className="group">
-                  CHECK COURSES
+                  CHECK SERVICES
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform"
@@ -50,12 +51,12 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Course Banner */}
-          <div className="flex justify-center md:justify-end">
+          
+          {/* <div className="flex justify-center md:justify-end">
             <div className="relative rounded-lg overflow-hidden border-4 border-amber-400 shadow-xl max-w-md transform hover:scale-102 transition-transform duration-300">
               <img src="/api/placeholder/600/400" alt="Practical Course in GST ITR TDS" className="w-full h-auto" />
 
-              {/* Play button overlay */}
+              
               <div className="absolute inset-0 flex items-center justify-center">
                 <button
                   className="bg-white bg-opacity-80 rounded-full p-4 hover:bg-opacity-100 transition-all transform hover:scale-110"
@@ -76,7 +77,7 @@ const HeroSection = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

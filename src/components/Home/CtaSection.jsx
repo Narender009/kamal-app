@@ -36,10 +36,11 @@ const CtaSection = () => {
           <span className="bg-indigo-500 text-white text-sm font-medium px-3 py-1 rounded-full">Limited Time Offer</span>
         </div>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white drop-shadow-md">
-          Ready to Start Your <span className="text-indigo-200">Learning Journey</span>?
+          Ready to Begin Your <span className="text-indigo-200">GST & Taxation Journey</span>?
         </h2>
+
         <p className="text-xl mb-8 max-w-2xl mx-auto text-indigo-100">
-          Join thousands of students who have transformed their careers with our practical courses.
+          Join thousands of businesses who have streamlined their operations with our expert legal, taxation, and compliance solutions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <CustomButton 
@@ -47,7 +48,7 @@ const CtaSection = () => {
             className="min-w-[180px]"
           >
             <BookOpen size={18} className="mr-2" />
-            Explore Courses
+            Explore Services
           </CustomButton>
           
           <CustomButton 

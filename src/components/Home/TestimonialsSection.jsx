@@ -36,8 +36,8 @@ const TestimonialsSection = () => {
     <section className="py-16 bg-indigo-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-indigo-800">What Our Students Say</h2>
-          <p className="text-indigo-600 mt-2">Hear from our satisfied learners about their experience</p>
+          <h2 className="text-3xl font-bold text-indigo-800">What Our Clients Say</h2>
+          <p className="text-indigo-600 mt-2">Hear from our satisfied Clients about their experience</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

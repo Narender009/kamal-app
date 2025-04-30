@@ -3,27 +3,27 @@ import React from "react"
 const courses = [
   {
     id: 1,
-    title: "GST Course",
-    description: "Learn practical aspects of GST filing, returns, and compliance.",
-    image: "/api/placeholder/300/200",
+    title: "GST Registration",
+    description: "Expert GST registration with full legal compliance and accurate documentation.",
+    image: "https://govtsevaa.com/wp-content/uploads/2021/06/GST-Registration.jpg",
   },
   {
     id: 2,
     title: "Income Tax & ITR",
     description: "Master income tax calculations and ITR filing for individuals and businesses.",
-    image: "/api/placeholder/300/200",
+    image: "https://www.globalconsultantsreview.com/newstransfer/upload/cjtyrsz_tax_return.jpg",
   },
   {
     id: 3,
-    title: "TDS Course",
-    description: "Understand TDS provisions, calculations, and filing procedures.",
-    image: "/api/placeholder/300/200",
+    title: "TDS Filing",
+    description: "Accurate TDS filing with expert guidance, ensuring timely compliance and documentation.",
+    image: "https://miro.medium.com/v2/resize:fit:800/1*cmOzlsHvp8i2mmqqcL_NnA.jpeg",
   },
   {
     id: 4,
-    title: "Tally Prime",
-    description: "Learn accounting and financial management using Tally Prime software.",
-    image: "/api/placeholder/300/200",
+    title: "PF & ESI Filing",
+    description: "Expert PF & ESI filing with timely submissions and full statutory compliance.",
+    image: "https://th.bing.com/th/id/R.bbe85db2df4fea253bae70becf00d54b?rik=zsZgGWux5pCWjA&riu=http%3a%2f%2fwww.auditdisciples.com%2fwp-content%2fuploads%2f2018%2f11%2fPF-ESI.jpg&ehk=b4ZpTQMPzU5xdejUD9gdHgFeqLld90GP%2fcKUpiG8x4g%3d&risl=&pid=ImgRaw&r=0",
   },
 ]
 
@@ -31,10 +31,11 @@ const CoursesList = () => {
   return (
     <section className="py-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-indigo-900">Our Popular Courses</h2>
-          <p className="text-indigo-600 mt-2">Practical courses designed for real-world applications</p>
-        </div>
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold text-indigo-900">Our Popular Services</h2>
+        <p className="text-indigo-600 mt-2">Expert legal, tax, and business solutions tailored for startups, MSMEs, and growing enterprises.</p>
+      </div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {courses.map((course) => (
@@ -78,7 +79,7 @@ const CoursesList = () => {
             href="/courses"
             className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-700 to-purple-700 text-white font-medium rounded-full hover:from-indigo-800 hover:to-purple-800 transition-all shadow-md hover:shadow-lg"
           >
-            View All Courses
+            View All Services
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path
                 fillRule="evenodd"
