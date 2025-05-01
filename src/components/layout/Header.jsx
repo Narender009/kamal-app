@@ -1,16 +1,33 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  // Handle scrolling effects
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
   }
 
+
+
   return (
-    <header className="bg-gradient-to-r from-indigo-900 to-purple-800 py-4 px-6 shadow-md">
+    <header className={`bg-gradient-to-r from-indigo-900 to-purple-800 py-2 px-4 sm:py-3 sm:px-6 md:py-4 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-lg' : 'shadow-md'}`}>
       <div className="container mx-auto flex justify-between items-center">
         <a href="/" className="flex items-center gap-2">
           <img src="images/logo.png" alt="KamalTaxPro Logo" className="h-20" />
