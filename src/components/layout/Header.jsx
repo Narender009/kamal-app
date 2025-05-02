@@ -39,7 +39,7 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center space-x-6">
           <NavLink href="/">Home</NavLink>
-          <NavLink href="/courses">Courses</NavLink>
+          {/* <NavLink href="/courses">Courses</NavLink> */}
           <NavLink href="/services">Services</NavLink>
           <NavLink href="/consult-us">Consult Us</NavLink>
           <NavLink href="/buy-dsc">Buy DSC</NavLink>
