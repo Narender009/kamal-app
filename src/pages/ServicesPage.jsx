@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CheckCircle, ChevronDown, ChevronUp } from "lucide-react";
 import ServicesHeader from "../components/layout/ServicesHeader";
+import CTASection from "../components/layout/CTASection";
 
 // Service categories with their respective services
 const serviceCategories = [
@@ -506,7 +507,8 @@ const ServicesPage = () => {
             ))}
           </div>
           
-          <div className="mt-16 text-center bg-gray-50 p-8 rounded-xl shadow-sm">
+          
+          {/* <div className="mt-16 text-center bg-gray-50 p-8 rounded-xl shadow-sm">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Need Custom Solutions?</h2>
             <p className="text-gray-600 max-w-2xl mx-auto mb-6">
               We understand that every business is unique. Contact us for custom packages tailored to your specific requirements.
@@ -514,9 +516,10 @@ const ServicesPage = () => {
             <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-medium rounded-full hover:opacity-90 transition-colors shadow-md">
               Get in Touch
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
+      <CTASection />
     </>
   );
 };
