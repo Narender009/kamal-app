@@ -46,7 +46,7 @@ const ServicesHeader = () => {
             92.83c70.05,18.48,146.53,26.09,
             214.34,3V0H0V27.35A600.21,600.21,
             0,0,0,321.39,56.44Z"
-            className="fill-white">
+            className="fill-gray-50 to-white">
           </path>
         </svg>
       </div>
