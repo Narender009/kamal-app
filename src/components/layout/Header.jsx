@@ -66,7 +66,7 @@ const Header = () => {
         <div className="md:hidden mt-4 bg-indigo-900 border-t border-indigo-700">
           <div className="flex flex-col space-y-3 py-4 px-6">
             <MobileNavLink href="/" onClick={toggleMobileMenu}>Home</MobileNavLink>
-            <MobileNavLink href="/courses" onClick={toggleMobileMenu}>Courses</MobileNavLink>
+            {/* <MobileNavLink href="/courses" onClick={toggleMobileMenu}>Courses</MobileNavLink> */}
             <MobileNavLink href="/services" onClick={toggleMobileMenu}>Services</MobileNavLink>
             <MobileNavLink href="/consult-us" onClick={toggleMobileMenu}>Consult Us</MobileNavLink>
             <MobileNavLink href="/buy-dsc" onClick={toggleMobileMenu}>Buy DSC</MobileNavLink>
