@@ -82,12 +82,12 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-purple-300">Quick Links</h3>
             <ul className="space-y-3">
               <li className="transition-transform duration-300 hover:translate-x-2">
-                <CustomLink href="/courses">
+                {/* <CustomLink href="/courses">
                   <span className="flex items-center">
                     <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
                     Courses
                   </span>
-                </CustomLink>
+                </CustomLink> */}
               </li>
               <li className="transition-transform duration-300 hover:translate-x-2">
                 <CustomLink href="/services">
