@@ -28,9 +28,9 @@ const AboutPage = () => {
   ]
 
   const stats = [
-    { number: "5000+", label: "Students Trained", icon: Users },
+    { number: "5000+", label: "Trained", icon: Users },
     { number: "15+", label: "Years Experience", icon: Award },
-    { number: "100+", label: "Courses Available", icon: BookOpen },
+    { number: "100+", label: "Available", icon: BookOpen },
     { number: "98%", label: "Success Rate", icon: TrendingUp },
   ]
 
