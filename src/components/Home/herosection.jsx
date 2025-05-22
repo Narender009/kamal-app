@@ -30,7 +30,7 @@ const HeroSection = () => {
             </div>
 
             <div>
-              <a href="/courses">
+              <a href="/services">
                 <Button className="group">
                   CHECK SERVICES
                   <svg
