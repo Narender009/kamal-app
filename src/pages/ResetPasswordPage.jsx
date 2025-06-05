@@ -1,0 +1,193 @@
+import React, { useState } from "react"
+import { Link, useParams } from "react-router-dom"
+import { Eye, EyeOff, CheckCircle } from "lucide-react"
+
+const ResetPasswordPage = () => {
+  const { token } = useParams()
+
+  const [formData, setFormData] = useState({
+    password: "",
+    confirmPassword: "",
+  })
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const [errors, setErrors] = useState({})
+  const [isLoading, setIsLoading] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
+
+  const validateForm = () => {
+    const newErrors = {}
+    const { password, confirmPassword } = formData
+
+    if (!password) {
+      newErrors.password = "Password is required"
+    } else if (password.length < 8) {
+      newErrors.password = "Password must be at least 8 characters"
+    } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(password)) {
+      newErrors.password =
+        "Password must contain at least one uppercase letter, one lowercase letter, and one number"
+    }
+
+    if (!confirmPassword) {
+      newErrors.confirmPassword = "Please confirm your password"
+    } else if (password !== confirmPassword) {
+      newErrors.confirmPassword = "Passwords do not match"
+    }
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    if (!validateForm()) return
+
+    setIsLoading(true)
+    try {
+      const res = await fetch("/api/auth/reset-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token, password: formData.password }),
+      })
+
+      const data = await res.json()
+
+      if (res.ok) {
+        setIsSuccess(true)
+      } else {
+        setErrors({ password: data.message || "Reset failed" })
+      }
+    } catch (err) {
+      setErrors({ password: "Something went wrong. Try again." })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  if (isSuccess) {
+    return (
+      <div className="container mx-auto px-6 py-12">
+        <div className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="py-4 px-6 bg-green-600 text-white text-center">
+            <CheckCircle className="h-8 w-8 mx-auto mb-2" />
+            <h2 className="text-2xl font-bold">Password Reset!</h2>
+          </div>
+          <div className="py-8 px-8 text-center">
+            <h3 className="text-lg font-medium text-gray-900 mb-2">Success!</h3>
+            <p className="text-gray-600 mb-6">
+              Your password has been reset. You can now log in with your new password.
+            </p>
+            <Link
+              to="/login"
+              className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium inline-block"
+            >
+              Go to Login
+            </Link>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="container mx-auto px-6 py-12">
+      <div className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="py-4 px-6 bg-blue-600 text-white text-center">
+          <h2 className="text-2xl font-bold">Reset Password</h2>
+          <p className="text-sm mt-1">Enter your new password</p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="py-6 px-8">
+          {/* Password Input */}
+          <div className="mb-4">
+            <label htmlFor="password" className="block text-gray-700 font-medium mb-2">
+              New Password
+            </label>
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  errors.password ? "border-red-500" : "border-gray-300"
+                }`}
+                placeholder="Enter new password"
+              />
+              <button
+                type="button"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+              </button>
+            </div>
+            {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
+            <p className="text-gray-500 text-xs mt-1">
+              Must be at least 8 characters with uppercase, lowercase, and number
+            </p>
+          </div>
+
+          {/* Confirm Password Input */}
+          <div className="mb-6">
+            <label htmlFor="confirmPassword" className="block text-gray-700 font-medium mb-2">
+              Confirm New Password
+            </label>
+            <div className="relative">
+              <input
+                type={showConfirmPassword ? "text" : "password"}
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  errors.confirmPassword ? "border-red-500" : "border-gray-300"
+                }`}
+                placeholder="Confirm new password"
+              />
+              <button
+                type="button"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              >
+                {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+              </button>
+            </div>
+            {errors.confirmPassword && (
+              <p className="text-red-500 text-xs mt-1">{errors.confirmPassword}</p>
+            )}
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {isLoading ? "Resetting..." : "Reset Password"}
+          </button>
+
+          <div className="mt-6 text-center">
+            <Link to="/login" className="text-blue-600 hover:underline text-sm font-medium">
+              ← Back to Login
+            </Link>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+}
+
+export default ResetPasswordPage
