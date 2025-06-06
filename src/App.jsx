@@ -13,11 +13,14 @@ import LoginPage from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
 import ForgotPasswordPage from "./pages/ForgotPasswordPage"
 import ResetPasswordPage from "./pages/ResetPasswordPage"
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 
 function App() {
   return (
+    
     <Layout>
+      <SpeedInsights />
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/courses" element={<CoursesPage />} /> */}
