@@ -2,13 +2,31 @@
 
 import React, { useState, useEffect } from "react"
 import { useAuth } from "../../Context/AuthContext";
-import { UserCircle } from "lucide-react"; // Optional: use any icon library you prefer
+import { UserCircle, LogOut } from "lucide-react";
+import { useRef } from "react";
 
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const { user, isAuthenticated } = useAuth();
+  const { user, isAuthenticated, logout } = useAuth();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const handleLogout = () => {
+    logout();
+    setDropdownOpen(false);
+  };
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setDropdownOpen(false);
+    }
+  };
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => document.removeEventListener("mousedown", handleClickOutside);
+}, []);
 
 
   // Handle scrolling effects
@@ -52,13 +70,30 @@ const Header = () => {
           <NavLink href="/about-us">About us</NavLink>
           <NavLink href="/faq">FAQ</NavLink>
           {isAuthenticated ? (
-          <NavLink href="/account" className="flex items-center gap-1 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md transition-colors">
-            <UserCircle className="h-5 w-5" />
-            <span>Account</span>
-          </NavLink>
-        ) : (
-          <NavLink href="/login" className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md transition-colors">Login</NavLink>
-        )}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="flex items-center gap-1 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md transition-colors"
+              >
+                <UserCircle className="h-5 w-5" />
+                <span>Account</span>
+              </button>
+              {dropdownOpen && (
+                <div className="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg z-10">
+                  <button
+                    onClick={handleLogout}
+                    className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center gap-2"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <NavLink href="/login" className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md transition-colors">Login</NavLink>
+          )}
+
 
         </nav>
 
@@ -87,10 +122,10 @@ const Header = () => {
             <MobileNavLink href="/about-us" onClick={toggleMobileMenu}>About us</MobileNavLink>
             <MobileNavLink href="/faq" onClick={toggleMobileMenu}>FAQ</MobileNavLink>
             {isAuthenticated ? (
-              <MobileNavLink href="/account" onClick={toggleMobileMenu} className="bg-amber-500 text-white px-4 py-2 rounded-md inline-block mt-2 flex items-center gap-1">
-                <UserCircle className="h-5 w-5" />
-                <span>Account</span>
-              </MobileNavLink>
+              <>
+                <MobileNavLink href="/account" onClick={toggleMobileMenu}>Account</MobileNavLink>
+                <MobileNavLink href="#" onClick={() => { handleLogout(); toggleMobileMenu(); }} className="text-red-400">Logout</MobileNavLink>
+              </>
             ) : (
               <MobileNavLink href="/login" onClick={toggleMobileMenu} className="bg-amber-500 text-white px-4 py-2 rounded-md inline-block mt-2">Login</MobileNavLink>
             )}
