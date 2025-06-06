@@ -1,10 +1,15 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
+import { useAuth } from "../../Context/AuthContext";
+import { UserCircle } from "lucide-react"; // Optional: use any icon library you prefer
+
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { user, isAuthenticated } = useAuth();
+
 
   // Handle scrolling effects
   useEffect(() => {
@@ -46,7 +51,15 @@ const Header = () => {
           <NavLink href="/newsletter">Newsletter</NavLink>
           <NavLink href="/about-us">About us</NavLink>
           <NavLink href="/faq">FAQ</NavLink>
+          {isAuthenticated ? (
+          <NavLink href="/account" className="flex items-center gap-1 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md transition-colors">
+            <UserCircle className="h-5 w-5" />
+            <span>Account</span>
+          </NavLink>
+        ) : (
           <NavLink href="/login" className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md transition-colors">Login</NavLink>
+        )}
+
         </nav>
 
         <button className="md:hidden text-amber-100" onClick={toggleMobileMenu}>
@@ -73,7 +86,15 @@ const Header = () => {
             <MobileNavLink href="/newsletter" onClick={toggleMobileMenu}>Newsletter</MobileNavLink>
             <MobileNavLink href="/about-us" onClick={toggleMobileMenu}>About us</MobileNavLink>
             <MobileNavLink href="/faq" onClick={toggleMobileMenu}>FAQ</MobileNavLink>
-            <MobileNavLink href="/login" onClick={toggleMobileMenu} className="bg-amber-500 text-white px-4 py-2 rounded-md inline-block mt-2">Login</MobileNavLink>
+            {isAuthenticated ? (
+              <MobileNavLink href="/account" onClick={toggleMobileMenu} className="bg-amber-500 text-white px-4 py-2 rounded-md inline-block mt-2 flex items-center gap-1">
+                <UserCircle className="h-5 w-5" />
+                <span>Account</span>
+              </MobileNavLink>
+            ) : (
+              <MobileNavLink href="/login" onClick={toggleMobileMenu} className="bg-amber-500 text-white px-4 py-2 rounded-md inline-block mt-2">Login</MobileNavLink>
+            )}
+
           </div>
         </div>
       )}
